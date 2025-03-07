@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+body{
+   background-image: url(img/fundo\ preto.png) ;
+   flex-direction: column;
+   color: white;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.button {
+    background-color: transparent; 
+    color: white;
+    padding: 10px 20px; 
+    font-size: 40px; 
+    border: none; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    text-align: right;
+    margin-left: 78px;
+    display: inline-flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: auto; 
+    height: auto; 
+}
+
+.button:hover {
+    background-color: white;
+    color: black;
+}
+
+.button a {
+    text-decoration: none;
+    font-size: inherit; 
+    font-weight: bold;
+}
+
+.button a:visited {
+    color: inherit; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.carrossel {
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#slide1:checked ~ .slides {
+    transform: translateX(0%);
+}
+
+#slide2:checked ~ .slides {
+    transform: translateX(-33.33%);
+}
+
+#slide3:checked ~ .slides {
+    transform: translateX(-66.66%);
+}
+
+
+.navegacao {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.navegacao label {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#slide1:checked ~ .navegacao label:nth-child(1),
+#slide2:checked ~ .navegacao label:nth-child(2),
+#slide3:checked ~ .navegacao label:nth-child(3) {
+    background-color: #007BFF;
+}
+
+@keyframes slideAnim {
+    0%, 33.33% { transform: translateX(0%); }
+    33.34%, 66.66% { transform: translateX(-33.33%); }
+    66.67%, 100% { transform: translateX(-66.66%); }
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    animation: slideAnim 9s infinite ease-in-out;
+}
+
+.texto {
+    color: white;
+    font-size: 30px;
+    margin-top: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.contador {
+    color: white;
+    font-size: 25px;
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:
+}
+
+
+
+
+.carrossel {
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#slide1:checked ~ .slides {
+    transform: translateX(0%);
+}
+
+#slide2:checked ~ .slides {
+    transform: translateX(-33.33%);
+}
+
+#slide3:checked ~ .slides {
+    transform: translateX(-66.66%);
+}
+
+.navegacao {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.navegacao label {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#slide1:checked ~ .navegacao label:nth-child(1),
+#slide2:checked ~ .navegacao label:nth-child(2),
+#slide3:checked ~ .navegacao label:nth-child(3) {
+    background-color: #007BFF;
+}
+
+@keyframes slideAnim {
+    0%, 33.33% { transform: translateX(0%); }
+    33.34%, 66.66% { transform: translateX(-33.33%); }
+    66.67%, 100% { transform: translateX(-66.66%); }
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    animation: slideAnim 9s infinite ease-in-out;
+}
+
+.texto {
+    color: white;
+    font-size: 25px;
+    margin-top: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.contador {
+    color: white;
+    font-size: 25px;
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:
+}
+

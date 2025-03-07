@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Feliz Dia Da Mulher</title>
+</head>
+<body>
+
+    <div class="carrossel">
+        <!-- Botões de seleção -->
+        <input type="radio" name="slide" id="slide1" checked>
+        <input type="radio" name="slide" id="slide2">
+        <input type="radio" name="slide" id="slide3">
+
+        <!-- Slides -->
+        <div class="slides">
+            <div class="slide"><img src="img/foto espelho.jpeg" alt="Imagem 1"></div>
+            <div class="slide"><img src="img/foto carro.jpeg" alt="Imagem 2"></div>
+            <div class="slide"><img src="img/piscina.jpeg" alt="Imagem 3"></div>
+        </div>
+
+        <!-- Navegação -->
+        <div class="navegacao">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+        </div>
+    </div>
+    
+    <main class="texto">
+        Eu te Amo há: 
+    </main>
+    
+    <div id="contador" class="contador"></div>
+    
+
+    <script>
+        // Data do namoro (21 de janeiro de 2024)
+        const dataNamoro = new Date("2024-01-21T00:00:00").getTime();
+    
+        // Função para calcular a diferença e atualizar o temporizador
+        function atualizarTemporizador() {
+            // Data atual
+            const agora = new Date().getTime();
+    
+            // Diferença de tempo entre o namoro e o tempo atual
+            const diferenca = agora - dataNamoro;
+    
+            // Calculando anos, meses, dias, horas, minutos e segundos
+            const anos = Math.floor(diferenca / (1000 * 60 * 60 * 24 * 365));
+            const meses = Math.floor(diferenca / (1000 * 60 * 60 * 24 * 30)) % 12;
+            const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24)) % 30;
+            const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+    
+            // Função para verificar singular ou plural
+            function singularPlural(valor, singular, plural) {
+                return valor === 1 ? singular : plural;
+            }
+    
+            // Atualizando o conteúdo do temporizador na página
+            document.getElementById("contador").innerHTML = `${anos} ${singularPlural(anos, 'ano', 'anos')} ${meses} ${singularPlural(meses, 'mês', 'meses')} ${dias} ${singularPlural(dias, 'dia', 'dias')} ${horas} ${singularPlural(horas, 'hora', 'horas')} ${minutos} ${singularPlural(minutos, 'minuto', 'minutos')} ${segundos} ${singularPlural(segundos, 'segundo', 'segundos')}`;
+        }
+    
+        // Atualiza o temporizador a cada segundo
+        setInterval(atualizarTemporizador, 1000);
+    </script>
+    
+    <div class="texto">
+        Feliz dia da mulher, você é inspiração, força e transformação, tenho muita admiração pela mulher que te tornasse e vem se tornando. Eu te amo demais!!
+    </div>
+
+</body>
+</html>
